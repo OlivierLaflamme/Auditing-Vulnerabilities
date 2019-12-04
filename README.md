@@ -3,6 +3,6 @@ In this repository I'll host my research and methodologies for auditing vulnerab
 
 
 ### XXE 
-Talking about JAVA and PHP XXE Basic Concepts, Solutions and Restrictions.    
+Talking about JAVA and PHP XXE. I'll be documenting what I've learned going over the basic concepts, from the basic concept principle-> utilization-> auditing-> defense.        
 0x0 [Introduction](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Introduction.md)      
 0x1 [Restrictions and Solutions to XML XXE](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Restrictions_and_Solutions_XML_XXE.md)   
