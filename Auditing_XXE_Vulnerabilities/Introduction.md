@@ -93,3 +93,27 @@ HTTP/1.0 200 OK
 Hello World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World
 ```
 
+## 0x2 External Common Entity  
+An external entity is used to load the contents of an external file. (Shows that XXE attacks mainly use ordinary entities)   
+External general entity syntax:   
+`<!ENTITY Entity Name SYSTEM "URI/URL"`
+Such as:   
+```
+<! DOCTYPE foo [<! ELEMENT foo ANY> 
+<! ENTITY xxe SYSTEM "file: /// etc / passwd"> ]>
+ <foo> & xxe; </ xxe>
+```   
+```
+<? xml version = "1.0" encoding = "utf-8"?> 
+<! DOCTYPe root [ 
+    <! ENTITY outfile SYSTEM "outfile.xml">
+]>
+<root> <outfile> & outfile; </ outfile> </ root>
+```    
+
+## 0x3 External PArameter Entity 
+```
+<! ENTITY% entity name "entity value">
+or
+<! ENTITY% entity name SYSTEM "URI">
+```
