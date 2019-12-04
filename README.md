@@ -5,3 +5,4 @@ In this repository I'll host my research and methodologies for auditing vulnerab
 ### XXE 
 Talking about JAVA and PHP XXE Basic Concepts, Solutions and Restrictions.    
 [Introduction](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Introduction.md)      
+[Restrictions and Solutions to XML XXE]()
