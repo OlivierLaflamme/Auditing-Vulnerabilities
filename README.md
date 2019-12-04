@@ -12,3 +12,8 @@ Talking about JAVA and PHP XXE. I'll be documenting what I've learned going over
 0x5 [The 1 Python Thing](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/tree/master/Auditing_XXE_Vulnerabilities/Python)    
 
 ### SSRF
+
+
+
+TODO:    
+Improve XXE PHP File it's kinda shit as it stands.   
