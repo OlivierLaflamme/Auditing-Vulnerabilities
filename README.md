@@ -3,8 +3,8 @@ In this repository I'll host my research and methodologies for auditing vulnerab
 
 
 ### XXE 
-Talking about JAVA and PHP XXE. I'll be documenting what I've learned going over the basic concepts, from the basic concept principle-> utilization-> auditing-> defense.     
-Quick Overview Of XXE [XXE Attack Methodes | The Quick and Dirty](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/The_3_XXE.md)   
+Talking about JAVA and PHP XXE. I'll be documenting what I've learned going over the basic concepts, from the basic concept principle=> utilization=> auditin => defense.     
+Quick Overview Of XXE => [XXE Attack Methodes | The Quick and Dirty](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/The_3_XXE.md)   
 0x0 [Introduction](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Introduction.md)   
 0x1 [Restrictions and Solutions to XML XXE](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Restrictions_and_Solutions_XML_XXE.md)     
 0x2 [Summary of Use](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Summary_of_Use.md)    
