@@ -15,6 +15,7 @@ Talking about JAVA and PHP XXE. I'll be documenting what I've learned going over
 ### HTTP Smuggling 
 Talking about HTTP-Smuggling and how it leverages the different ways that a particularly crafted HTTP message can be parsed and interpreted by different agents (browsers, web caches, application firewalls)...    
 0x0 [HTTP-Smuggling](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/HTTP_Smuggling.md)   
+0x1 [Preventing HTTP-Smuggling & Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/Preventing_HTTP_Smuggling.md)   
 
 ### CORS   
 ### CSRF   
