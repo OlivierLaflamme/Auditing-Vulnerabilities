@@ -1,1 +1,26 @@
 https://regilero.github.io/tag/Smuggling/
+
+https://github.com/golang/go/issues/34540
+
+https://tools.ietf.org/html/rfc7230
+
+https://portswigger.net/web-security/request-smuggling
+
+https://regilero.github.io/tag/Smuggling/
+
+https://hackerone.com/reports/648434
+
+https://medium.com/@factoryhr/http-2-the-difference-between-http-1-1-benefits-and-how-to-use-it-38094fa0e95b
+
+There are related vulnerabilities disclosed on hackerone. Here are a few articles about digging holes:
+
+Write up of two HTTP Requests Smuggling
+https://medium.com/@cc1h2e1/write-up-of-two-http-requests-smuggling-ff211656fe7d
+
+
+HTTP Request Smuggling (CL.TE)
+https://memn0ps.github.io/2019/11/02/HTTP-Request-Smuggling-CL-TE.html
+
+
+HTTP Request Smuggling on vpn.lob.com
+https://hackerone.com/reports/694604
