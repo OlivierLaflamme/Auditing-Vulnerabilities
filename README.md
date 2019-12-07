@@ -17,7 +17,7 @@ Talking about JAVA and PHP XXE. I'll be documenting what I've learned going over
 ### CORS   
 ### CSRF   
 ### SSRF   
-
+### WAF 
 
 
 TODO:    
