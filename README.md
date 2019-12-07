@@ -20,6 +20,7 @@ Talking about HTTP-Smuggling and how it leverages the different ways that a part
 ### CSRF   
 ### SSRF   
 ### WAF 
+### CRLF
 
 # 
 TODO:    
