@@ -5,7 +5,8 @@ This document is shit at the moment but we should know the harmfulness of HTTP r
 3. The front and back end use the same server.    
 
 Some of the above measures cannot fundamentally solve the problem, and there are many deficiencies, such as disabling the reuse of TCP connections between the proxy server and the back-end server, which will increase the pressure on the back-end server.       
-The use of HTTP / 2 cannot be promoted at all under current network conditions. Even servers supporting the HTTP / 2 protocol will be compatible with HTTP / 1.1. Therefore the cause of HTTP request smuggling is not a problem of protocol design, but a problem of different server implementations. Honestly the best yet least simple solution is to implement RFC7230-7235, but this is also The hardest thing to do.    
+
+The use of HTTP / 2 cannot be promoted at all under current network conditions. Even servers supporting the HTTP / 2 protocol will be compatible with HTTP / 1.1. Therefore the cause of HTTP request smuggling is not a problem of protocol design, but a problem of different server implementations. Honestly the best yet least simple solution is to implement RFC7230-7235, but this is also The hardest thing to do.     
 
 However, I have consulted many attack articles and did not mention why HTTP / 2 can prevent HTTP Smuggling. And it's been said by other sources that “Use HTTP / 2 for back-end connections, as this protocol prevents ambiguity about the boundaries between requests.”   
 
