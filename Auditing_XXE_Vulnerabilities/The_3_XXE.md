@@ -1,4 +1,4 @@
-# What is XXS
+# What is XXE
 
 XML external entity (XXE) injection is a serious flaw that allows an attacker to read local files on the server, access internal networks, scan internal ports or execute commands on remote servers. It is targeted at applications that parse XML.   
 
