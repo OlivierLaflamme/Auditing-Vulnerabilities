@@ -63,15 +63,16 @@ B) Destination: Each request has a corresponding destination, including "documen
 2. If the request’s initiator is “manifest”, return manifest-src.   
 3. If the request’s destination is “subresource”, return connect-src.   
 4. If the request’s destination is “unknown”, return object-src.   
-5. If the request’s destination is “document” and the request’s target browsing context is a nested browsing context, return child-src.    
+5. If the request’s destination is “document” and the request’s target browsing context is a nested browsing context:    
+return child-src.        
 `Audio” -> “track” -> “video`
-Return media-src.    
+Return media-src.          
 `font`
-Return font-src.
+Return font-src.   
 `image`
-Return image-src.
+Return image-src.   
 `style`
-Return style-src.
+Return style-src.   
 `script`
  
  
