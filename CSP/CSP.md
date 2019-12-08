@@ -17,7 +17,7 @@ CSP mainly has three headers:
  
 #Source of CSP 
 The CSPs we often see are similar to this:    
-`header("Content-Security-Policy:default-src 'none'; connect-src 'self'; frame-src 'self'; script-src xxxx/js/ 'sha256-KcMxZjpVxhUhzZiwuZ82bc0vAhYbUJsxyCXODP5ulto=' 'sha256-u++5+hMvnsKeoBWohJxxO3U9yHQHZU+2damUA6wnikQ=' 'sha256-zArnh0kTjtEOVDnamfOrI8qSpoiZbXttc6LzqNno8MM=' 'sha256-3PB3EBmojhuJg8mStgxkyy3OEJYJ73ruOF7nRScYnxk=' 'sha256-bk9UfcsBy+DUFULLU6uX/sJa0q7O7B8Aal2VVl43aDs=';font-src xxxx/fonts/ fonts.gstatic.com; style-src xxxx/css/ fonts.googleapis.com; img-src 'self'");`
+`header("Content-Security-Policy:default-src 'none'; connect-src 'self'; frame-src 'self'; script-src xxxx/js/ 'sha256-KcMxZjpVxhUhzZiwuZ82bc0vAhYbUJsxyCXODP5ulto=' 'sha256-u++5+hMvnsKeoBWohJxxO3U9yHQHZU+2damUA6wnikQ=' 'sha256-zArnh0kTjtEOVDnamfOrI8qSpoiZbXttc6LzqNno8MM=' 'sha256-3PB3EBmojhuJg8mStgxkyy3OEJYJ73ruOF7nRScYnxk=' 'sha256-bk9UfcsBy+DUFULLU6uX/sJa0q7O7B8Aal2VVl43aDs=';font-src xxxx/fonts/ fonts.gstatic.com; style-src xxxx/css/ fonts.googleapis.com; img-src 'self'");`     
 It contains a variety of wording:    
 1. none and self, none of what the representative does not match, self representatives of matching homologous source   
 2. is similar matches such https://example.com/path/to/file.js special file, or https: //example.com/ This will match everything under the source.    
@@ -63,15 +63,16 @@ B) Destination: Each request has a corresponding destination, including "documen
 2. If the request’s initiator is “manifest”, return manifest-src.   
 3. If the request’s destination is “subresource”, return connect-src.   
 4. If the request’s destination is “unknown”, return object-src.   
-5. If the request’s destination is “document” and the request’s target browsing context is a nested browsing context, return child-src.    
+5. If the request’s destination is “document” and the request’s target browsing context is a nested browsing context:    
+return child-src.        
 `Audio” -> “track” -> “video`
-Return media-src.    
+Return media-src.          
 `font`
-Return font-src.
+Return font-src.   
 `image`
-Return image-src.
+Return image-src.   
 `style`
-Return style-src.
+Return style-src.   
 `script`
  
  
