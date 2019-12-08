@@ -27,9 +27,10 @@ Discuss some techniques for how I bypass CSRF defenses.
 Generally, SSRF attacks target internal systems that are not accessible from the external network. Lets figure out how this attack vector works... 
 0x0 [Understanding SSRF](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/Understanding_SSRF.md)    
 0x1 [SSRF Bypassing](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Bypass.md)   
-0x2 [SSRF Python Bypassing]   
-0x3 [SSRF PHP Bypassing]   
+0x2 [SSRF Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Defense.md)    
+0x3 [SSRF Python Bypassing](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/tree/master/SSRF/PHP)   
 0x4 [SSRF in CTF's](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_For_CTF.md)     
+0x5 [SSRF MAP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Map.md)    
 
 ### WAF 
 0x0 [Bypassing WAF at HTTP protocl level](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/WAF/Bypassing_WAF_at_the_HTTP_Protocol_Level.md)   
