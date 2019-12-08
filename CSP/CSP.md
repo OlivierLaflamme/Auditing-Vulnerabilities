@@ -17,7 +17,7 @@ CSP mainly has three headers:
  
 #Source of CSP 
 The CSPs we often see are similar to this:    
-`header("Content-Security-Policy:default-src 'none'; connect-src 'self'; frame-src 'self'; script-src xxxx/js/ 'sha256-KcMxZjpVxhUhzZiwuZ82bc0vAhYbUJsxyCXODP5ulto=' 'sha256-u++5+hMvnsKeoBWohJxxO3U9yHQHZU+2damUA6wnikQ=' 'sha256-zArnh0kTjtEOVDnamfOrI8qSpoiZbXttc6LzqNno8MM=' 'sha256-3PB3EBmojhuJg8mStgxkyy3OEJYJ73ruOF7nRScYnxk=' 'sha256-bk9UfcsBy+DUFULLU6uX/sJa0q7O7B8Aal2VVl43aDs=';font-src xxxx/fonts/ fonts.gstatic.com; style-src xxxx/css/ fonts.googleapis.com; img-src 'self'");`
+`header("Content-Security-Policy:default-src 'none'; connect-src 'self'; frame-src 'self'; script-src xxxx/js/ 'sha256-KcMxZjpVxhUhzZiwuZ82bc0vAhYbUJsxyCXODP5ulto=' 'sha256-u++5+hMvnsKeoBWohJxxO3U9yHQHZU+2damUA6wnikQ=' 'sha256-zArnh0kTjtEOVDnamfOrI8qSpoiZbXttc6LzqNno8MM=' 'sha256-3PB3EBmojhuJg8mStgxkyy3OEJYJ73ruOF7nRScYnxk=' 'sha256-bk9UfcsBy+DUFULLU6uX/sJa0q7O7B8Aal2VVl43aDs=';font-src xxxx/fonts/ fonts.gstatic.com; style-src xxxx/css/ fonts.googleapis.com; img-src 'self'");`     
 It contains a variety of wording:    
 1. none and self, none of what the representative does not match, self representatives of matching homologous source   
 2. is similar matches such https://example.com/path/to/file.js special file, or https: //example.com/ This will match everything under the source.    
