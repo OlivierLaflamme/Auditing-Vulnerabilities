@@ -1,7 +1,8 @@
 # Auditing-Vulnerabilities
-In this repository I'll host my research and methodologies for auditing vulnerabilities. Some of these concepts are new to me and I just want to udnerstand them document them, and have a quick reference for these vectors.  <b>Perpetually in the works.</b>     
-  
-
+In this repository I'll host my research and methodologies for auditing vulnerabilities. Some of these concepts are new to me and I just want to udnerstand them document them, and have a quick reference for these vectors.  <b>Perpetually in the works.</b>        
+**Some of my images are in chinese. I've got a few chinese VM's that I use (base65536) so dont be shocked. And whatever text is in chinese you should understand / have seen similar interfaces to wit in your past**     
+**我提供了的一些中文图片信息，因为我有少量虚拟机。你应该能够理解我提供的中文信息，并且你很可能已经通过别的渠道见过了。**   
+___
 
 ### XXE 
 Talking about JAVA and PHP XXE. I'll be documenting what I've learned going over basic concepts, from their i'll document basic  principle / methodology, its utilization how can be audited, and defense.     
@@ -48,7 +49,7 @@ TODO
 ### CORS   
 TODO
 
-# 
+___
 ### References and Related Materials: 
 [XXE References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/References.txt)   
 [CSP References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/References.txt)    
@@ -57,7 +58,7 @@ TODO
 [CSRF References]()    
 [WAF References]()
 
-# 
+___
 ### TODO:    
 1. Improve XXE PHP File it's kinda shit as it stands.     
 2. CSRF improuve.    
