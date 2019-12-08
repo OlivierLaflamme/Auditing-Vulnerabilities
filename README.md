@@ -24,7 +24,7 @@ Discuss some techniques for how I bypass CSRF defenses.
 0x2 [Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF_Defense.md)    
    
 ### SSRF   
-Generally, SSRF attacks target internal systems that are not accessible from the external network. Lets figure out how this attack vector works... 
+Generally, SSRF attacks target internal systems that are not accessible from the external network. Lets figure out how this attack vector works...    
 0x0 [Understanding SSRF](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/Understanding_SSRF.md)    
 0x1 [SSRF Bypassing](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Bypass.md)   
 0x2 [SSRF Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Defense.md)    
