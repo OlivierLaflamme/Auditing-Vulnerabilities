@@ -20,12 +20,21 @@ Talking about HTTP-Smuggling and how it leverages the different ways that a part
 ### WAF 
 0x0 [Bypassing WAF at HTTP protocl level](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/WAF/Bypassing_WAF_at_the_HTTP_Protocol_Level.md)   
 
-### CORS   
 ### CSRF  
-Ddiscuss some techniques for how I bypass CSRF defenses.      
+Discuss some techniques for how I bypass CSRF defenses.  
+0x0 [CSRF Introduction](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF.md)    
+0x1 [Bypassing WAF Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/Bypassing_CSRF_defense.md)    
+0x2 [Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF_Defense.md)    
+
+
+### CORS   
+   
 ### SSRF   
+
 ### CRLF
 
 # 
 TODO:    
-Improve XXE PHP File it's kinda shit as it stands.   
+1. Improve XXE PHP File it's kinda shit as it stands.     
+2. CSRF improuve.    
+3. WAF section is shit.    
