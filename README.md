@@ -5,7 +5,7 @@ ___
 
 ### XXE 
 Talking about JAVA and PHP XXE. I'll be documenting what I've learned going over basic concepts, from their i'll document basic  principle / methodology, its utilization how can be audited, and defense.     
-0x0 [XXE Attack Methodes | The Quick and Dirty](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/The_3_XXE.md)   
+0x0 [XXE Attack Methodes | The Quick and Dirty & Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/The_3_XXE.md)   
 0x1 [Introduction](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Introduction.md)   
 0x2 [Restrictions to XML XXE](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Restrictions_XML_XXE.md)      
 0x3 [Summary of Use](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Summary_of_Use.md)    
