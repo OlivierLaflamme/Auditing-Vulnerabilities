@@ -34,7 +34,7 @@ Looking into SSRF what they are and how its vector works / affects. Generally, S
 0x5 [SSRF MAP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Map.md)    
 
 ### CSP 
-Learning about CSP why its used and how to bypass. 
+Learning about CSP why its used and how to bypass.   
 0x0 [About CSP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/CSP.md)      
 0x1 [Bypassing CSP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/bypassing_CSP.md)    
 0x2 [CSP Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/CSP_Defense.md)    
