@@ -21,7 +21,8 @@ Talking about HTTP-Smuggling and how it leverages the different ways that a part
 0x0 [Bypassing WAF at HTTP protocl level](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/WAF_Bypass/Bypassing_WAF_at_the_HTTP_Protocol_Level.md)   
 
 ### CORS   
-### CSRF   
+### CSRF  
+Ddiscuss some techniques for how I bypass CSRF defenses.      
 ### SSRF   
 ### CRLF
 
