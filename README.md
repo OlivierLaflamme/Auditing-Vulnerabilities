@@ -4,7 +4,7 @@ In this repository I'll host my research and methodologies for auditing vulnerab
 
 
 ### XXE 
-Talking about JAVA and PHP XXE. I'll be documenting what I've learned going over the basic concepts, from the basic concept principle=> utilization=> auditin => defense.     
+Talking about JAVA and PHP XXE. I'll be documenting what I've learned going over basic concepts, from their i'll document basic  principle / methodology, its utilization how can be audited, and defense.     
 0x0 [XXE Attack Methodes | The Quick and Dirty](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/The_3_XXE.md)   
 0x1 [Introduction](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Introduction.md)   
 0x2 [Restrictions and Solutions to XML XXE](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Restrictions_and_Solutions_XML_XXE.md)     
@@ -19,13 +19,13 @@ Talking about HTTP-Smuggling and how it leverages the different ways that a part
 0x1 [Preventing HTTP-Smuggling & Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/Preventing_HTTP_Smuggling.md)   
 
 ### CSRF  
-Discuss some techniques for how I bypass CSRF defenses.  
+Discuss what is CSRF and some techniques for how I bypass CSRF defenses.  
 0x0 [CSRF Introduction](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF.md)    
 0x1 [Bypassing WAF Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/Bypassing_CSRF_defense.md)    
 0x2 [Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF_Defense.md)    
    
 ### SSRF   
-Generally, SSRF attacks target internal systems that are not accessible from the external network. Lets figure out how this attack vector works...    
+Looking into SSRF what they are and how its vector works / affects. Generally, SSRF attacks target internal systems that are not accessible from the external network. Lets figure out how...    
 0x0 [Understanding SSRF](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/Understanding_SSRF.md)    
 0x1 [SSRF Bypassing](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Bypass.md)   
 0x2 [SSRF Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Defense.md)    
@@ -34,7 +34,7 @@ Generally, SSRF attacks target internal systems that are not accessible from the
 0x5 [SSRF MAP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Map.md)    
 
 ### CSP 
-Learning about CSP and how to bypass. 
+Learning about CSP why its used and how to bypass. 
 0x0 [About CSP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/CSP.md)     
 0x1 [Bypassing CSP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/bypassing_CSP.md)    
 
@@ -42,10 +42,11 @@ Learning about CSP and how to bypass.
 ### WAF 
 0x0 [Bypassing WAF at HTTP protocl level](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/WAF/Bypassing_WAF_at_the_HTTP_Protocol_Level.md)   
 
-
-
 ### CRLF
+TODO    
+
 ### CORS   
+TODO
 
 # 
 ### References and Related Materials: 
