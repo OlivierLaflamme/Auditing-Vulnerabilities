@@ -17,17 +17,11 @@ Talking about HTTP-Smuggling and how it leverages the different ways that a part
 0x0 [HTTP-Smuggling](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/HTTP_Smuggling.md)   
 0x1 [Preventing HTTP-Smuggling & Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/Preventing_HTTP_Smuggling.md)   
 
-### WAF 
-0x0 [Bypassing WAF at HTTP protocl level](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/WAF/Bypassing_WAF_at_the_HTTP_Protocol_Level.md)   
-
 ### CSRF  
 Discuss some techniques for how I bypass CSRF defenses.  
 0x0 [CSRF Introduction](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF.md)    
 0x1 [Bypassing WAF Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/Bypassing_CSRF_defense.md)    
 0x2 [Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF_Defense.md)    
-
-
-### CORS   
    
 ### SSRF   
 Generally, SSRF attacks target internal systems that are not accessible from the external network. Lets figure out how this attack vector works... 
@@ -37,8 +31,11 @@ Generally, SSRF attacks target internal systems that are not accessible from the
 0x3 [SSRF PHP Bypassing]   
 0x4 [SSRF in CTF's](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_For_CTF.md)     
 
-### CRLF
+### WAF 
+0x0 [Bypassing WAF at HTTP protocl level](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/WAF/Bypassing_WAF_at_the_HTTP_Protocol_Level.md)   
 
+### CRLF
+### CORS   
 # 
 TODO:    
 1. Improve XXE PHP File it's kinda shit as it stands.     
