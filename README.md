@@ -30,6 +30,7 @@ Discuss some techniques for how I bypass CSRF defenses.
 ### CORS   
    
 ### SSRF   
+Generally, SSRF attacks target internal systems that are not accessible from the external network. Lets figure out how this attack vector works... 
 
 ### CRLF
 
