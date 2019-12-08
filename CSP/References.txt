@@ -5,3 +5,4 @@ http://lorexxar.cn/2016/08/08/ccsp/
 http://paper.seebug.org/91/
 https://blog.0daylabs.com/2016/09/09/bypassing-csp/
 http: //dogewatch.github.io/2016/11/01/By-Pass-CSP/
+This guy is smart as fuck amazing front end defense article https://blog.csdn.net/qq_43380549/article/details/100726963
