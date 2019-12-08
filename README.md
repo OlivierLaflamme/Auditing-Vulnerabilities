@@ -67,6 +67,7 @@ ___
 4. "Understanding SSRF" format isnt compliant with other documents - shit formatting
 5. SSRF Bypassing needs to add / fix php and python
 6. ADD WAF and CSRF Reference material and linkes i find smart and useful 
+7. a lot of work and time needs to be invested in CSRF
 
 
 
