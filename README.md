@@ -1,5 +1,6 @@
 # Auditing-Vulnerabilities
-In this repository I'll host my research and methodologies for auditing vulnerabilities. <b>Perpetually in the works.</b> 
+In this repository I'll host my research and methodologies for auditing vulnerabilities. Some of these concepts are new to me and I just want to udnerstand them document them, and have a quick reference for these vectors.  <b>Perpetually in the works.</b>     
+  
 
 
 ### XXE 
@@ -45,23 +46,24 @@ Learning about CSP and how to bypass.
 
 ### CRLF
 ### CORS   
-# 
-TODO:    
-1. Improve XXE PHP File it's kinda shit as it stands.     
-2. CSRF improuve.    
-3. WAF section is shit.    
-4. "Understanding SSRF" format isnt compliant with other documents - shit formatting
-5. SSRF Bypassing needs to add / fix php and python
 
 # 
-INFO: 
-Most of these concepts are new to me too and I just want to udnerstand them before I jump into a full time infosec role.    
-# 
-References and Related Materials: 
+### References and Related Materials: 
 [XXE References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/References.txt)   
 [CSP References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/References.txt)    
 [HTTP-Hijacking References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/references.txt)   
 [SSRF References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/References_and_Related_Materials.txt)   
 [CSRF References]()    
 [WAF References]()
+
+# 
+### TODO:    
+1. Improve XXE PHP File it's kinda shit as it stands.     
+2. CSRF improuve.    
+3. WAF section is shit.    
+4. "Understanding SSRF" format isnt compliant with other documents - shit formatting
+5. SSRF Bypassing needs to add / fix php and python
+
+
+
 
