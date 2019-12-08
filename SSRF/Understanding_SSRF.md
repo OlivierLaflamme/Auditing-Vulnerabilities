@@ -1,6 +1,10 @@
 # SSRF 
 SSRF (Server-Side Request Forgery: server-side request forgery) is a fake exploit server-initiated requests. Generally, SSRF attacks target internal systems that are not accessible from the external network.     
 
+### Types of SSRF 
+A. Show response to attacker (basic)    
+B. Do now show response (blind)    
+
 ### The basics of the vulnerability 
 SSRF (Server-Side Request Forgery: Server-Side Request Forgery) is a security vulnerability constructed by an attacker to form a request initiated by the server. Generally, SSRF attacks target internal systems that are not accessible from the external network. (Because it is initiated by the server, it can request the internal system that is connected to it and isolated from the external network)
 
@@ -22,14 +26,7 @@ SSRF (Server-Side Request Forgery: Server-Side Request Forgery) is a security vu
 
 1. Exclusion method: browser f12 checks the source code to see if the request was made locally (For example: If the resource address type is http://www.xxx.com/a.php?image=(address), an SSRF vulnerability may exist)     
 2. dnslog and other tools to test to see if they are accessed (You can encode the uri and parameters of the currently prepared request into base64 in the blind typing background use case, so that after blind typing background decoding, you know which machine and which cgi triggered the request.)    
-3.  Capture and analyze whether the request sent by the server is sent by the server. If it is not a request from the client, it may be, and then find the internal network address where the HTTP service exists (Look for leaked web application intranet addresses from historical vulnerabilities in the vulnerable platform)
+3. Capture and analyze whether the request sent by the server is sent by the server. If it is not a request from the client, it may be, and then find the internal network address where the HTTP service exists (Look for leaked web application intranet addresses from historical vulnerabilities in the vulnerable platform)
 4. Banner, title, content and other information returned directly    
 5. Pay attention to bool SSRF
 
-
-#### How to prevent SSRF 
-1.  It is easier to filter the returned information and verify the response of the remote server to the request. If the web application is to get a certain type of file. Then verify that the returned information meets the standards before displaying the returned results to the user.    
-2.  Disable unwanted protocols and only allow http and https requests. Prevent problems like file: //, gopher: //, ftp: //, etc.    
-3. Set URL whitelist or restrict intranet IP (use gethostbyname () to determine if it is an intranet IP)    
-4. limit the requested port to the port commonly used by http, such as 80, 443, 8080, 8090
-5. Unified error information to avoid users from judging the port status of the remote server based on the error information.
