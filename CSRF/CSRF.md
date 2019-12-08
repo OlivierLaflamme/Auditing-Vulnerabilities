@@ -1,4 +1,4 @@
-### CSRF (Cross-site request forgery) AKA one click attack / session riding, CSRF / XSRF.    
+### CSRF (Cross-site request forgery) / one click attack / session riding, CSRF / XSRF.    
 
 #### That this all about? 
 CSRF (Cross-site request forgery) cross-site request forgery: also known as "One Click Attack"
