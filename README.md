@@ -32,8 +32,13 @@ Generally, SSRF attacks target internal systems that are not accessible from the
 0x4 [SSRF in CTF's](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_For_CTF.md)     
 0x5 [SSRF MAP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Map.md)    
 
+### CSP 
+Learning about CSP and how to bypass. 
+
 ### WAF 
 0x0 [Bypassing WAF at HTTP protocl level](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/WAF/Bypassing_WAF_at_the_HTTP_Protocol_Level.md)   
+
+
 
 ### CRLF
 ### CORS   
@@ -44,3 +49,7 @@ TODO:
 3. WAF section is shit.    
 4. "Understanding SSRF" format isnt compliant with other documents - shit formatting
 5. SSRF Bypassing needs to add / fix php and python
+
+# 
+INFO: 
+Most of these concepts are new to me too and I just want to udnerstand them before I jump into a full time infosec role.    
