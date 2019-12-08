@@ -1,0 +1,3 @@
+https://www.cspisawesome.com/   
+https://www.acunetix.com/vulnerabilities/web/content-security-policy-csp-not-implemented/    
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
