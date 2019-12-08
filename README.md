@@ -17,10 +17,12 @@ Talking about HTTP-Smuggling and how it leverages the different ways that a part
 0x0 [HTTP-Smuggling](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/HTTP_Smuggling.md)   
 0x1 [Preventing HTTP-Smuggling & Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/Preventing_HTTP_Smuggling.md)   
 
+### WAF 
+0x0 [Bypassing WAF at HTTP protocl level](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/WAF_Bypass/Bypassing_WAF_at_the_HTTP_Protocol_Level.md)   
+
 ### CORS   
 ### CSRF   
 ### SSRF   
-### WAF 
 ### CRLF
 
 # 
