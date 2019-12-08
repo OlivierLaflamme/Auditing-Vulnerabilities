@@ -45,11 +45,13 @@ Learning about CSP (Content Security Policy) why its used and how to bypass.
 ### WAF 
 0x0 [Bypassing WAF at HTTP protocl level](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/WAF/Bypassing_WAF_at_the_HTTP_Protocol_Level.md)   
 
+### CORS  
+Cross-domain resource sharing (cors) can relax the browser's same-origin policy, allowing different websites and different servers to communicate through the browser. Exploring how this vector works and how to defend against it.    
+
+
 ### CRLF
 TODO    
 
-### CORS   
-TODO
 
 ___
 ### References and Related Materials: 
