@@ -35,8 +35,10 @@ Looking into SSRF what they are and how its vector works / affects. Generally, S
 
 ### CSP 
 Learning about CSP why its used and how to bypass. 
-0x0 [About CSP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/CSP.md)     
+0x0 [About CSP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/CSP.md)      
 0x1 [Bypassing CSP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/bypassing_CSP.md)    
+0x2 [CSP Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/CSP_Defense.md)    
+0x3 [CSP CTF](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/CSP_CTF.md)    
 
 
 ### WAF 
