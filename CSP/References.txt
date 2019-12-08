@@ -1,3 +1,7 @@
 https://www.cspisawesome.com/   
 https://www.acunetix.com/vulnerabilities/web/content-security-policy-csp-not-implemented/    
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+http://lorexxar.cn/2016/08/08/ccsp/
+http://paper.seebug.org/91/
+https://blog.0daylabs.com/2016/09/09/bypassing-csp/
+http: //dogewatch.github.io/2016/11/01/By-Pass-CSP/
