@@ -1,4 +1,6 @@
-Scramble chunked packets with annotations 
+### Method
+
+### Scramble chunked packets with annotations 
 
 At this time, if you try to bypass the conventional chunked transmission method directly, Will be directly identified and blocked by WAF.      
 
