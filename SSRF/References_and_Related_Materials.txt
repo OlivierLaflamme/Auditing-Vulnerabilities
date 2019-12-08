@@ -1,0 +1,29 @@
+[1] http://blog.safebuff.com/2016/07/03/SSRF-Tips/
+
+[2] https://paper.seebug.org/393/
+
+[3] https://www.hackerone.com/blog-How-To-Server-Side-Request-Forgery-SSRF
+
+[4] http://blog.blindspotsecurity.com/2017/02/advisory-javapython-ftp-injections.html
+
+[5] https://medium.com/secjuice/php-ssrf-techniques-9d422cb28d51
+
+[6] http://byd.dropsec.xyz/2017/06/04/SSRF%E6%BC%8F%E6%B4%9E%E5%89%96%E6%9E%90%E4%B8%8E % E5% 88% A9% E7% 94% A8 /
+
+[7] https://www.leavesongs.com/PYTHON/defend-ssrf-vulnerable-in-python.html
+
+[8] https://www.secpulse.com/archives/65832.html
+
+[9] https://www.cnblogs.com/s0ky1xd/p/5859049.html
+
+[10] https://www.t00ls.net/articles-41070.html
+
+[11] https://ricterz.me/posts/%E5%88%A9%E7%94%A8%20gopher%20%E5%8D%8F%E8%AE%AE%E6%8B%93%E5% B1% 95% E6% 94% BB% E5% 87% BB% E9% 9D% A2
+
+[12] https://ricterz.me/posts/HITCON%202017%20SSRFme
+
+[13] http://bobao.360.cn/learning/detail/240.html
+
+[14] https://github.com/JnuSimba/MiscSecNotes/tree/master/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%B7%E6%B1%82% E4% BC% AA% E9% 80% A0
+
+[15] https://github.com/ring04h/papers/blob/master/build_your_ssrf_exp_autowork--20160711.pdf
