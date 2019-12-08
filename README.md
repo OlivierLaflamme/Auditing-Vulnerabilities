@@ -32,10 +32,10 @@ Discuss some techniques for how I bypass CSRF defenses.
 ### SSRF   
 Generally, SSRF attacks target internal systems that are not accessible from the external network. Lets figure out how this attack vector works... 
 0x0 [Understanding SSRF](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/Understanding_SSRF.md)    
-0x1 [SSRF Bypassing](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Bypass.md)
-0x2 [SSRF Python Bypassing]
-0x3 [SSRF PHP Bypassing]
-0x4 [SSRF in CTF's](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_For_CTF.md)   
+0x1 [SSRF Bypassing](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Bypass.md)   
+0x2 [SSRF Python Bypassing]   
+0x3 [SSRF PHP Bypassing]   
+0x4 [SSRF in CTF's](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_For_CTF.md)     
 
 ### CRLF
 
