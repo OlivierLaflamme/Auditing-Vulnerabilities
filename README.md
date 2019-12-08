@@ -56,7 +56,7 @@ ___
 [CSP References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/References.txt)    
 [HTTP-Hijacking References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/references.txt)   
 [SSRF References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/References_and_Related_Materials.txt)   
-[CSRF References]()    
+[CSRF References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF_References.txt)    
 [WAF References]()
 
 ___
