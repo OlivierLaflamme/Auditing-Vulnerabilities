@@ -24,3 +24,12 @@ csrf script, which may perform some functions that the user does not want to do
 Attackers have stolen your identity and sent malicious requests on your behalf. The things that CSRF can do 
 include: send emails, send messages on your behalf, stealing your account, and even purchase goods, 
 virtual currency transfers ... The problems caused include: leakage of personal privacy and property security.
+
+#### Vulnerability Classification 
+1. GET Type    
+The GET-type CSRF vulnerability only needs to construct a URL, and then 
+induce the victim to visit and exploit it. The use of CSRF for GET type is very simple, 
+only one HTTP request is needed.   
+
+2. POST Type    
+The POST-type CSRF vulnerability needs to construct an auto-submit or click-to-submit form, and then induce the victim to visit or click to exploit.    
