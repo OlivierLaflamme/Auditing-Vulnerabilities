@@ -63,7 +63,7 @@ Learning about CSP and how to bypass.
 3. WAF section is shit.    
 4. "Understanding SSRF" format isnt compliant with other documents - shit formatting
 5. SSRF Bypassing needs to add / fix php and python
-
+6. ADD WAF and CSRF Reference material and linkes i find smart and useful 
 
 
 
