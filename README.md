@@ -11,18 +11,13 @@ Talking about JAVA and PHP XXE. I'll be documenting what I've learned going over
 0x3 [Summary of Use](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/Summary_of_Use.md)    
 0x4 [Everything JAVA](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/tree/master/Auditing_XXE_Vulnerabilities/JAVA)   
 0x5 [Everything PHP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/tree/master/Auditing_XXE_Vulnerabilities/PHP)   
-0x6 [The 1 Python Thing](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/tree/master/Auditing_XXE_Vulnerabilities/Python)    
-
-### HTTP Smuggling 
-Talking about HTTP-Smuggling and how it leverages the different ways that a particularly crafted HTTP message can be parsed and interpreted by different agents (browsers, web caches, application firewalls)...    
-0x0 [HTTP-Smuggling](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/HTTP_Smuggling.md)   
-0x1 [Preventing HTTP-Smuggling & Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/Preventing_HTTP_Smuggling.md)   
-
+0x6 [The 1 Python Thing](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/tree/master/Auditing_XXE_Vulnerabilities/Python)     
 ### CSRF  
 Discuss what is CSRF and some techniques for how I bypass CSRF defenses.  
 0x0 [CSRF Introduction](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF.md)    
 0x1 [Bypassing WAF Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/Bypassing_CSRF_defense.md)    
-0x2 [Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF_Defense.md)    
+0x2 [Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF_Defense.md)   
+0x3 [CSRF CTF](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSRF/CSRF_Post_Swigger_Web_Academy_CTF.md)   
    
 ### SSRF   
 Looking into SSRF what they are and how its vector works / affects. Generally, SSRF attacks target internal systems that are not accessible from the external network. Lets figure out how...    
@@ -32,6 +27,11 @@ Looking into SSRF what they are and how its vector works / affects. Generally, S
 0x3 [SSRF Python Bypassing](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/tree/master/SSRF/PHP)   
 0x4 [SSRF in CTF's](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_For_CTF.md)     
 0x5 [SSRF MAP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/SSRF_Map.md)    
+
+### HTTP Smuggling 
+Talking about HTTP-Smuggling and how it leverages the different ways that a particularly crafted HTTP message can be parsed and interpreted by different agents (browsers, web caches, application firewalls)...    
+0x0 [HTTP-Smuggling](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/HTTP_Smuggling.md)   
+0x1 [Preventing HTTP-Smuggling & Defense](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/Preventing_HTTP_Smuggling.md)   
 
 ### CSP 
 Learning about CSP why its used and how to bypass.   
