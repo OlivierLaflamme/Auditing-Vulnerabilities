@@ -34,6 +34,9 @@ Generally, SSRF attacks target internal systems that are not accessible from the
 
 ### CSP 
 Learning about CSP and how to bypass. 
+0x0 [About CSP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/CSP.md)     
+0x1 [Bypassing CSP](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/bypassing_CSP.md)    
+
 
 ### WAF 
 0x0 [Bypassing WAF at HTTP protocl level](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/WAF/Bypassing_WAF_at_the_HTTP_Protocol_Level.md)   
@@ -53,3 +56,12 @@ TODO:
 # 
 INFO: 
 Most of these concepts are new to me too and I just want to udnerstand them before I jump into a full time infosec role.    
+# 
+References and Related Materials: 
+[XXE References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/Auditing_XXE_Vulnerabilities/References.txt)   
+[CSP References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/CSP/References.txt)    
+[HTTP-Hijacking References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/HTTP_Smuggling/references.txt)   
+[SSRF References](https://github.com/OlivierLaflamme/Auditing-Vulnerabilities/blob/master/SSRF/References_and_Related_Materials.txt)   
+[CSRF References]()    
+[WAF References]()
+
