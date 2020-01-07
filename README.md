@@ -50,8 +50,10 @@ Cross-domain resource sharing (cors) can relax the browser's same-origin policy,
 
 
 ### CRLF
-TODO    
+TODO     
 
+### Reading arbitrary files via directory traversal
+TODO   
 
 ___
 ### References and Related Materials: 
